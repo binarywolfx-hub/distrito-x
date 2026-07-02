@@ -1,0 +1,6 @@
+{
+  "name": "Distrito X",
+  "description": "Festival Urbano de Deportes Extremos, Rimas, Moto Stunt y Cultura de Calle de Medellín.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

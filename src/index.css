@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Anybody", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-primary: #ff571a; /* Ignition Orange */
+  --color-primary-dim: #ffb59e;
+  --color-secondary: #fdd000; /* Volt Yellow */
+  --color-secondary-dim: #ffe07c;
+  --color-background-black: #000000;
+  --color-surface-dark: #0d0d0d;
+  --color-surface-card: #141414;
+  --color-asphalt: #1c1b1b;
+  --color-grunge-white: #f2f2f2;
+}
+
+/* Custom scrollbar matching the brutalist theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff571a;
+  border: 1px solid #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #fdd000;
+}
+
+/* Halftone overlay style */
+.halftone-overlay {
+  background-image: radial-gradient(rgba(255, 87, 26, 0.08) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+}
+
+/* Diagonal stripe utility for industrial warning strip */
+.warning-strip {
+  background: repeating-linear-gradient(
+    -45deg,
+    #ff571a,
+    #ff571a 10px,
+    #000000 10px,
+    #000000 20px
+  );
+}
+
+.warning-strip-yellow {
+  background: repeating-linear-gradient(
+    -45deg,
+    #fdd000,
+    #fdd000 10px,
+    #000000 10px,
+    #000000 20px
+  );
+}
+
+/* Brutalist thick borders */
+.brutalist-border {
+  border: 3px solid #ff571a;
+}
+.brutalist-border-yellow {
+  border: 3px solid #fdd000;
+}
+.brutalist-border-white {
+  border: 3px solid #f2f2f2;
+}
+
+/* Clip paths for aggressive dog-ear angles */
+.clip-dogear {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 4%, 100% 96%, 0 100%);
+}
+
+/* Highlight style */
+::selection {
+  background-color: #ff571a;
+  color: #000000;
+}
